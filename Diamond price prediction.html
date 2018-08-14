@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="_w_bf344275/">
+    <script type="text/javascript">
+(function() {
+  var workerId = '_w_bf344275';
+  // remove base href if worker ID is in url
+  if (window.location.href.indexOf(workerId) > 0) {
+    document.querySelector('base').removeAttribute('href');
+  }
+})();
+</script>
+
+      <script type="text/javascript">
+      var __connect = {
+        shinyPre101: true
+      }
+      </script>
+      
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  <script type="application/shiny-singletons"></script>  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.11.3];shiny[0.13.2];selectize[0.11.2];bootstrap[3.3.5]</script><script src="shared/json2-min.js"></script>
+<script src="shared/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>
+<link href="shared/selectize/css/selectize.bootstrap3.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+<script src="shared/selectize/js/es5-shim.min.js"></script>
+<![endif]-->
+<script src="shared/selectize/js/selectize.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="shared/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="shared/bootstrap/js/bootstrap.min.js"></script>
+<script src="shared/bootstrap/shim/html5shiv.min.js"></script>
+<script src="shared/bootstrap/shim/respond.min.js"></script>  <title>Diamond price prediction</title>
+
+<script src="__assets__/sockjs-0.3.min.js"></script>
+<script src="__assets__/shiny-server-client.js"></script>
+<script>preShinyInit({reconnect:false,reconnectTimeout:0,disableProtocols:["xdr-streaming","xdr-polling","websocket"],transportDebugging:false,token:true,workerId:true,subappTag:true,extendSession:true,fixupInternalLinks:true});</script>
+<link rel="stylesheet" type="text/css" href="__assets__/rstudio-connect.css"/>
+</head>
+
+<body>
+<script type="text/javascript" src="/__static__/components/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
+<script type="text/javascript" src="/__static__/frontend/scripts/shinyapps.frame.content.js"></script>
+<script type="text/javascript" src="/__static__/frontend/scripts/shinyapps.js"></script>
+
+  <div class="container-fluid">
+    <h2>Diamond price prediction</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <form class="well">
+          <span class="help-block">This application predicts the price of a diamond based on its characteristics.</span>
+          <h3>
+            <span class="help-block">Select:</span>
+          </h3>
+          <div class="form-group shiny-input-container">
+            <label for="car">
+              <h4>Carats</h4>
+            </label>
+            <input id="car" type="number" class="form-control" value="2" step="0.01"/>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="cut">
+              <h4>Cut</h4>
+            </label>
+            <div>
+              <select id="cut"><option value="*" selected>Unknown</option>
+<option value="Fair">Fair</option>
+<option value="^Good">Good</option>
+<option value="Very Good">Very Good</option>
+<option value="Premium">Premium</option>
+<option value="Ideal">Ideal</option></select>
+              <script type="application/json" data-for="cut" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="col">
+              <h4>Color</h4>
+            </label>
+            <div>
+              <select id="col"><option value="*" selected>Unknown</option>
+<option value="D">D</option>
+<option value="E">E</option>
+<option value="F">F</option>
+<option value="G">G</option>
+<option value="H">H</option>
+<option value="I">I</option>
+<option value="J">J</option></select>
+              <script type="application/json" data-for="col" data-nonempty="">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="clar">
+              <h4>Clarity</h4>
+            </label>
+            <div>
+              <select id="clar"><option value="*" selected>Unknown</option>
+<option value="I1">I1</option>
+<option value="SI2">SI2</option>
+<option value="SI1">SI1</option>
+<option value="VS2">VS2</option>
+<option value="VS1">VS1</option>
+<option value="VVS2">VVS2</option>
+<option value="VVS1">VVS1</option>
+<option value="IF">IF</option></select>
+              <script type="application/json" data-for="clar" data-nonempty="">{}</script>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-8">
+        <div id="distPlot" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+        <h4>Predicted value of this diamond is:</h4>
+        <h3>
+          <div id="result" class="shiny-text-output"></div>
+        </h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
